@@ -6,8 +6,8 @@ __date__ = '2018/4/19 下午1:58'
 
 from multiprocessing import Process
 import os
-
 from apscheduler.schedulers.blocking import BlockingScheduler
+
 from datetime import datetime
 def one():
     os.system("python3 ./1.py")
@@ -18,7 +18,7 @@ def thr():
 # BlockingScheduler
 def one_sch():
     scheduler = BlockingScheduler()
-    scheduler.add_job(one, 'cron', day_of_week='1-5', hour=15, minute=39)
+    scheduler.add_job(one, 'cron', second = '*/5')
     scheduler.start()
 
 if __name__ == "__main__":
