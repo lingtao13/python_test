@@ -28,8 +28,9 @@ def insert_queue(queue):
         print("the queue total size: %s"%(queue.qsize()))
     print("task done")
 
+
 def dequeue(queue,i):
-    conn=pymysql.connect(host='127.0.0.1',port=3306,user='root',password='123',db='queue_thread')
+    conn=pymysql.connect(host='127.0.0.1',port=3306, user='root',password='123',db='queue_thread')
     cur=conn.cursor()
     sql="insert into threadtest(id,id2,id3) VALUES (%s,%s,%s)"
     start=datetime.now()
@@ -45,8 +46,7 @@ def dequeue(queue,i):
     print("dequeue done and take time %s"%(end-start))
 
 
-
-if __name__=="__main__":
+if __name__ == "__main__":
     q=queue.Queue()
     t1 = threading.Thread(target=insert_queue, args=(q,))
     t2 = threading.Thread(target=dequeue, args=(q, 2))
