@@ -5,4 +5,4 @@ import numpy as np
 b=np.ones((2,3))
 print(b)
 
-print(b.reshape(2,2))
+print(b.reshape(3,2))

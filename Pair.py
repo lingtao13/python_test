@@ -9,8 +9,10 @@ class Pair:
 
         return '({0.x!r}),{0.y!r})'.format(self)
 
+
 class Pair2:
     pass
+
 
 if __name__ == '__main__':
     p=Pair(3,4)
