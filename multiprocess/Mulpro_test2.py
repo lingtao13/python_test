@@ -27,7 +27,7 @@ def read_line(lines, mysql_insert):
 
 if __name__ == "__main__":
     f=open('/Users/nelsonpeng/Downloads/qtfyt.txt')
-    p=Pool(5)
+    p=Pool(10)
     start = datetime.now()
     count=0
     contentlist = []
